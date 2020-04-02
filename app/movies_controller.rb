@@ -85,7 +85,8 @@ def can_update_multiple_items_at_once
 end
 
 def can_destroy_a_single_item
-  m = Movie.create(title: "That One Where the Guy Kicks Another Guy Once")
+  Movie.create(title: "That One Where the Guy Kicks Another Guy Once")
+  Movie.find_by(title: "That One Where the Guy Kicks Another Guy Once")
   Movie.destroy(id:1)
 end
 
